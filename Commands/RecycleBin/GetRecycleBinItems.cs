@@ -15,7 +15,7 @@ namespace SharePointPnP.PowerShell.Commands
     public class GetRecycleBinItems : SPOWebCmdlet
     {
 
-        [Parameter(Mandatory = false, HelpMessage = "")]
+        [Parameter(Mandatory = false)]
         public string pagingInfo;
 
         [Parameter(Mandatory = false, HelpMessage = "Number of rows to return. Defaults to 50")]
@@ -24,13 +24,13 @@ namespace SharePointPnP.PowerShell.Commands
         [Parameter(Mandatory = false, HelpMessage = "Sort in ascending order. Defaults to true")]
         public SwitchParameter isAscending = true;
 
-        [Parameter(Mandatory = false, HelpMessage = "")]
+        [Parameter(Mandatory = false, HelpMessage ="Property to be sorted on")]
         public RecycleBinOrderBy orderBy = RecycleBinOrderBy.Min;
 
-        [Parameter(Mandatory = false, HelpMessage = "")]
+        [Parameter(Mandatory = false)]
         public RecycleBinItemState itemState = RecycleBinItemState.FirstStageRecycleBin;
 
-        [Parameter(Mandatory = false, HelpMessage = "")]
+        [Parameter(Mandatory = false)]
         public bool showOnlyMyItems = false;
 
 
